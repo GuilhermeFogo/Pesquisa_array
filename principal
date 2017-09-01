@@ -1,0 +1,38 @@
+public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+    
+		System.out.println("Digite o que procura");
+		String item = in.nextLine();
+		
+		String palavras ="guilherme,fogo,gabi,rosa,123654789,maiana, maria, loko, testa, array"; 
+		String[] teste = stringsToArray(palavras, 5, ",");
+		pesquisa(teste, item);
+	}
+
+	
+	public static void pesquisa(String[] array, String coisa_pesquisada) {
+			for (String string : array) {
+				Boolean contem = string.contains(coisa_pesquisada);
+				if (contem) {
+					
+					System.out.println("existe");
+					
+				} else {
+					System.out.println("não existe");
+				}
+			}
+			
+	}
+	
+	public static String[] stringsToArray(String valor ,int tamanho ,String pontuacao) {
+		// setando alguns valores de string
+		String frase = valor;
+		// criando uma array nova
+		String array1[] = new String[tamanho];
+		// verificando se a pontuaçõ é a mesma para a transformação
+		 array1 =frase.split(pontuacao);
+		 //retorna uma array
+		return array1;
+		
+	}
+}
