@@ -4,6 +4,7 @@ public static void main(String[] args) {
 		System.out.println("Digite o que procura");
 		String item = in.nextLine();
 		
+		// valores da String  semparado em ","
 		String palavras ="guilherme,105,19875,codigo,123654789,LOIK, bola, loko, testa, array"; 
 		String[] teste = stringsToArray(palavras, 5, ",");
 		pesquisa(teste, item);
